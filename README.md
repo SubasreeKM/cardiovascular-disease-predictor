@@ -96,3 +96,6 @@
 =======
 # cardiovascular-disease-predictor
 >>>>>>> f285225134b476b1516b2bec4534629657c408ea
+>>>>>>> 
+>>>>>>>You can go live on
+>>>>>>> https://cardiovascular-disease-predictor.onrender.com
