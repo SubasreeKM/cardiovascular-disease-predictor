@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="Stylesheet" href="static/main.css">
+  <title>Heart Disease prediction</title>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <i class="fas fa-atom"></i>
+      <p></p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/result_view">Result_output( Matrix )</a></li>
+        <li><a href="/index">predict</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="titles">
+
+    <h1>CARDIO VASCULAR DISEASE PROGNOSTICATOR</h1>
+    <p>Use our intelligent system to assess your heart disease risk in seconds.</p>
+
+  </section>
+
+  <section class="container-boxes">
+    <div class="box">
+
+      <div class="icon">
+        <a href=""><i class="fas fa-fire"></i></a>
+      </div>
+
+      <div class="text">
+        <a href="">
+          <h3>How It Works</h3>
+          <p>Enter health data like age, blood pressure, and cholesterol. Our ML model analyzes it instantly.</p>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="box">
+
+      <div class="icon">
+        <a href=""><i class="fas fa-seedling"></i></a>
+      </div>
+
+      <div class="text">
+        <a href="">
+          <h3>About the Model</h3>
+          <p>Trained on real medical data using Random Forest to ensure high accuracy and reliability.</p>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="box">
+
+      <div class="icon">
+        <a href=""><i class="fas fa-address-card"></i></a>
+      </div>
+
+      <div class="text">
+        <a href="">
+          <h3>Start Prediction</h3>
+          <p>Ready to try it? Click predict to access the prediction form and get results fast.</p>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+
+</html>
