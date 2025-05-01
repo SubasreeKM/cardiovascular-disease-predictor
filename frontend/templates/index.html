@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="Stylesheet" href="static/main.css">
+    <style>
+        body {
+            background-image: url('static/29135.jpg');
+        }
+        .card {
+            margin: auto;
+            width: 70%;
+            margin-top: 50px;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .btn-submit {
+            background-color:rgb(181, 37, 172);
+            color: white;
+            transition: 0.3s;
+        }
+        .btn-submit:hover {
+            background-color:rgb(181, 37, 172);
+        }
+        label{
+            font_weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+          <i class="fas fa-atom"></i>
+          <p></p>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/result_view">Result_output( Matrix )</a></li>
+            <li><a href="/index">predict</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+          </ul>
+        </nav>
+      </header>
+
+<div class="container">
+    <div class="card">
+        <h2 class="text-center"><B>CHECK YOUR HEART IS AT RISK OR NOT</B></h2>
+        <form action="/predict" method="post">
+            <div class="mb-3">
+                <label class="form-label"><b>Age:</b></label>
+                <input type="number" class="form-control" name="age" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Sex (1=Male, 0=Female):</b></label>
+                <input type="number" class="form-control" name="sex" required>
+            </div>
+            <div class="mb-3">
+                <label for="options"><b>Chest Pain Type:</b></label>
+        <select id="options" name="cp" class="form-select" required>
+            <option value="1">  Heart-Related Chest Pain  </option>
+            <option value="2"> Uncertain Chest Pain Origin </option>
+            <option value="3">  Non-Heart-Related Chest Pain </option>
+            <option value="4"> No Chest Pain or Symptoms </option>
+        </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Resting blood pressure ( in mm Hg  ):</b></label>
+                <input type="number" class="form-control" name="trestbps" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Cholesterol: ( in mg/dl  )</b></label>
+                <input type="number" class="form-control" name="chol" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Fasting Blood Sugar (1=Yes, 0=No):</b></label>
+                <input type="number" class="form-control" name="fbs" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Resting ECG:</b></label>
+                <select id="options" name="restecg" class="form-select" required>
+                    <option value="0">  Heart activity looks normal </option>
+                    <option value="1"> Possible heart issue, needs a closer look </option>
+                    <option value="2"> Heart muscle may be thickened </option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Max Heart Rate:</b></label>
+                <input type="number" class="form-control" name="thalach" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Exercise Induced Angina (1=Yes, 0=No):</b></label>
+                <input type="number" class="form-control" name="exang" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Oldpeak:( heart stress level )</b></label>
+                <input type="number" step="0.1" class="form-control" name="oldpeak" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><b>Slope:</b></label>
+                <select id="options" name="slope" class="form-select" required>
+                    <option value="0">  healthy   </option>
+                    <option value="1"> neutral    </option>
+                    <option value="2"> abnormal </option>
+                </select>
+            </div>
+            
+            <button type="submit" class="btn btn-submit w-100">Predict</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
